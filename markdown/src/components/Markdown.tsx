@@ -66,8 +66,6 @@ export default function RenderMarkdown(props:Props){
     fetchData();
   
   //setMessageText(message!);
-  
-    }, []);
 
   async function render_md(md_text:string) {
     const file = await unified()
@@ -81,6 +79,10 @@ export default function RenderMarkdown(props:Props){
     console.log(String(file))
     return file;
   }
+  
+    }, []);
+
+
 
   return (
     <div dangerouslySetInnerHTML={{ __html: content }} />
